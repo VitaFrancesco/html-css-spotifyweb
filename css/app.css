@@ -13,8 +13,50 @@ img{
     max-width: 100%;
 }
 
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
 /* layout */
 .viewport-height{
     height: 100vh;
     display: flex;
+    flex-direction: column;
+}
+
+.playbar{
+    height: 90px;
+}
+
+.main-content{
+    /* item */
+    flex-grow: 1;
+    /* container flex */
+    display: flex;
+}
+
+/* sidebar */
+.sidebar{
+    flex-basis: 50px;
+    padding: 5px 11px 11px;
+}
+
+.logo{
+    display: none;
+}
+
+/* home */
+.home{
+    flex-grow: 1;
+}
+
+/* utilities */
+
+/* mobile-first */
+/* media queries */
+@media (min-width: 639px){
+    .sidebar{
+        flex-basis: 230px;
+    }
 }
