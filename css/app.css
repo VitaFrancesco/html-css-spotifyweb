@@ -1,0 +1,20 @@
+/* reset rules */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* layout */
+.viewport-height{
+    height: 100vh;
+    display: flex;
+}
