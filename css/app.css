@@ -296,6 +296,27 @@ p, span{
     background-color: #141922;
 }
 
+.homepage .current-page{
+    border: none;
+}
+
+.homepage__menu{
+    line-height: 25px;
+}
+
+.current-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 23px;
+}
+
+.current-page__icon{
+    width: 30px;
+    height: 2px;
+    background-color: #ADFF2F;
+}
+
 
 /* utilities */
 
