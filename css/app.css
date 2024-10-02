@@ -30,7 +30,7 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
-body p, body span{
+body{
     color: #6B6B6B;
 }
 
@@ -38,11 +38,6 @@ body p, body span{
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.player{
-    height: 90px;
-    background-color: #282828;
 }
 
 .main-content{
@@ -152,6 +147,117 @@ p, span{
     flex-grow: 1;
 }
 
+/* player */
+.aside-player{
+    height: 90px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.song{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.song-image{
+    width: 42px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+}
+
+.song-image img{
+    display: block;
+	width: 100%;
+	height: 100%;
+    /* da correzione, da ricordare */
+	object-fit: cover;
+	object-position: center;
+}
+
+.info-song{
+    width: 50px;
+}
+
+.song-name{
+    font-size: 10px;
+}
+
+.artist{
+    font-size: 13px;
+    color: white;
+}
+
+.add-song{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player{
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    color: white;
+}
+
+.button-player .play{
+    margin: 0 10px;
+    font-size: 32px;
+}
+
+.button-player button{
+    font-size: 14px;
+}
+
+.progress-player{
+    display: flex;
+    min-width: 100%;
+    gap: 14px;
+    align-items: center;
+}
+
+.slider{
+    border-radius: 50px;
+    height: 4px;
+    background-color: #6B6B6B;
+    flex-grow: 1;
+    width: 128px;
+}
+
+.progress{
+    width: calc(100% / 6);
+    height: 100%;
+    background-color: #C1C1C1;
+    border-radius: 50px;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.controls .slider{
+    width: 80px;
+}
+
+.controls button{
+    color: #C1C1C1;
+}
+
+
 /* utilities */
 
 /* mobile-first */
@@ -212,5 +318,34 @@ p, span{
 
     .profile{
         align-items: flex-start;
+    }
+
+    /* player */
+    .info-song{
+        width: auto;
+    }
+
+    .controls .slider{
+        width: 100px;
+    }
+}
+
+@media (min-width: 878px){
+    /* player */
+    .add-song{
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .song{
+        width: 220px;
+    }
+
+    .info-song{
+        flex-grow: 1;
+    }
+
+    .controls .slider{
+        width: 120px;
     }
 }
