@@ -40,8 +40,9 @@ body p, body span{
     flex-direction: column;
 }
 
-.playbar{
+.player{
     height: 90px;
+    background-color: #282828;
 }
 
 .main-content{
@@ -65,7 +66,6 @@ p, span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo-app{
@@ -91,12 +91,6 @@ p, span{
 
 .home, .name-profile{
     color: white;
-}
-
-.sidebar-top{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
 .main-menu span, .profile span{
@@ -137,7 +131,10 @@ p, span{
 }
 
 .profile{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
 }
 
 .profile > div:first-child{
@@ -160,11 +157,24 @@ p, span{
 /* mobile-first */
 /* media queries */
 @media (min-width: 639px){
+    /* sidebar */
     .sidebar{
         flex-basis: 230px;
-        padding: 20px 20px 11px;
         text-align: left;
         align-items: flex-start;
+        padding: 20px 0 11px;
+    }
+
+    .sidebar > *{
+        padding: 0 20px;
+    }
+
+    .sidebar > .main-menu{
+        padding: 0;
+    }
+
+    .main-menu > *{
+        padding: 0 20px;
     }
 
     .logo{
@@ -175,11 +185,6 @@ p, span{
     .favicon{
         display: none;
     }
-
-    .sidebar-top{
-        align-items: flex-start;
-        text-align: left;
-    }    
 
     .main-menu span, .profile span{
         display: inline-block;
@@ -193,11 +198,19 @@ p, span{
         margin-bottom: 30px;
     }
 
+    .current-page{
+        border-left: #ADFF2F 3px solid;
+    }
+
     .playlist p{
         margin-bottom: 10px;
     }
 
     .playlist li:not(:last-child){
         margin-bottom: 22px;
+    }
+
+    .profile{
+        align-items: flex-start;
     }
 }
