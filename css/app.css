@@ -19,7 +19,17 @@ a{
     text-decoration: none;
 }
 
+button{
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+}
+
 /* layout */
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
 .viewport-height{
     height: 100vh;
     display: flex;
@@ -37,14 +47,99 @@ a{
     display: flex;
 }
 
+p, span{
+    font-size: 13px;
+}
+
 /* sidebar */
 .sidebar{
     flex-basis: 50px;
     padding: 5px 11px 11px;
+    background-color: black;
+    color: white;
+    flex-shrink: 0;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-app{
+    margin-bottom: 14px;
+}
+
+.favicon{
+    filter: invert(94%) sepia(6%) saturate(0%) hue-rotate(81deg) brightness(106%) contrast(105%);
 }
 
 .logo{
     display: none;
+}
+
+.main-menu img{
+    width: 22px;
+    aspect-ratio: 1/1;
+}
+
+.main-menu a:not(:last-child){
+    margin-bottom: 14px;
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-menu span, .profile span{
+    display: none;
+}
+
+.playlist{
+    display: none;
+}
+
+.playlist > p{
+    text-transform: uppercase;
+}
+
+.create-playlist :first-child{
+    padding: 8px;
+    background-color: #A3A3A3;
+}
+
+.create-playlist{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-profile{
+    width: 26px;
+    aspect-ratio: 1/1;
+    background-color: #808080;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.download{
+    width: 12px;
+    aspect-ratio: 1/1;
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile > div:first-child{
+    margin-bottom: 22px;
+}
+
+.profile > div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 /* home */
@@ -59,5 +154,42 @@ a{
 @media (min-width: 639px){
     .sidebar{
         flex-basis: 230px;
+        padding: 20px 20px 11px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .logo{
+        display: block;
+        width: 132px;
+    }
+
+    .favicon{
+        display: none;
+    }
+
+    .sidebar-top{
+        align-items: flex-start;
+        text-align: left;
+    }    
+
+    .main-menu span, .profile span{
+        display: inline-block;
+    }
+
+    .playlist{
+        display: block;
+    }
+
+    .main-menu{
+        margin-bottom: 30px;
+    }
+
+    .playlist p{
+        margin-bottom: 10px;
+    }
+
+    .playlist li:not(:last-child){
+        margin-bottom: 22px;
     }
 }
