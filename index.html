@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link rel="stylesheet" href="./css/app.css">
     <script src="https://kit.fontawesome.com/d6e906fb5a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="viewport-height">
         <div class="main-content">
             <div class="sidebar">
                 <div class="logo-app">
                     <a href="">
-                        <img  class="favicon" src="./img/favicon.ico" alt="favicon spotify">
+                        <img class="favicon" src="./img/favicon.ico" alt="favicon spotify">
                     </a>
                     <a href="">
                         <img class="logo" src="./img/logo.svg" alt="logo spotify"> <!-- display none -->
@@ -84,69 +86,94 @@
                     </div>
                 </div>
             </div>
-            <div class="home">
-                
+            <div class="homepage">
+                <div class="homepage__head">
+                    <a class="btn__cta" href="">effettua l&#39;upgrade</a>
+                </div>
+                <div class="scroll">
+                    <div class="homepage__menu">
+                        <div>
+                            <p><strong>in evidenza</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>podcast</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>classifiche</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>generi e mood</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>nuove uscite</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>scopri</strong></p>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+    <aside class="aside-player">
+        <div class="song">
+            <figure class="song-image">
+                <img src="./img/sinister.jpeg" alt="" />
+            </figure>
+            <div class="info-song">
+                <p class="artist">Sinister</p>
+                <p class="song-name"><strong>Brano Nome</strong></p>
+            </div>
+            <div class="add-song">
+                <button>
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <button>
+                    <i class="fa-regular fa-folder"></i>
+                </button>
             </div>
         </div>
-        <aside class="aside-player">
-            <div class="song">
-                <figure class="song-image">
-                    <img src="./img/sinister.jpeg" alt="" />
-                </figure>
-                <div class="info-song">
-                    <p class="artist">Sinister</p>
-                    <p class="song-name"><strong>Brano Nome</strong></p>
-                </div>
-                <div class="add-song">
-                    <button>
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                    <button>
-                        <i class="fa-regular fa-folder"></i>
-                    </button>
-                </div>
+        <div class="player">
+            <div class="button-player">
+                <button>
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button class="play">
+                    <i class="fa-regular fa-circle-play"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </button>
             </div>
-            <div class="player">
-                <div class="button-player">
-                    <button>
-                        <i class="fa-solid fa-shuffle"></i>
-                    </button>
-                    <button>
-                        <i class="fa-solid fa-backward-step"></i>
-                    </button>
-                    <button class="play">
-                        <i class="fa-regular fa-circle-play"></i>
-                    </button>
-                    <button>
-                        <i class="fa-solid fa-forward-step"></i>
-                    </button>
-                    <button>
-                        <i class="fa-solid fa-arrow-rotate-right"></i>
-                    </button>
-                </div>
-                <div class="progress-player">
-                    <p>0&#58;25</p>
-                    <div class="slider">
-                        <div class="progress"></div>
-                    </div>
-                    <p>4&#58;35</p>
-                </div>
-            </div>
-            <div class="controls">
-                <button>
-                    <i class="fa-solid fa-list"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-display"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-volume-high"></i>
-                </button>
+            <div class="progress-player">
+                <p>0&#58;25</p>
                 <div class="slider">
                     <div class="progress"></div>
                 </div>
+                <p>4&#58;35</p>
             </div>
-        </aside>
-    </div>
+        </div>
+        <div class="controls">
+            <button>
+                <i class="fa-solid fa-list"></i>
+            </button>
+            <button>
+                <i class="fa-solid fa-display"></i>
+            </button>
+            <button>
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <div class="slider">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </aside>
 </body>
+
 </html>
