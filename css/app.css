@@ -295,6 +295,20 @@ p, span{
 }
 
 /* homepage */
+
+/* chiedere */
+/* Step 1: Common Properties
+These styles are required to make icons render reliably */
+/* .icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-regular{
+    font: var();
+    content: '/f144';
+} */
+
 .homepage{
     flex-grow: 1;
     position: relative;
@@ -314,9 +328,33 @@ p, span{
     width: 100%;
 }
 
+.hover__play-song{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.homepage__artist .hover__play-song{
+    border-radius: 50%;
+}
+
+.hover__play-song > *{
+    font-size: 60px;
+    color: white;
+}
+
 /* hover */
 .homepage__head a:hover{
     transform: scale(1.1);
+}
+.homepage figure:hover .hover__play-song{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .homepage__menu{
@@ -388,6 +426,7 @@ p, span{
 .homepage figure{
     margin-bottom: 20px;
     aspect-ratio: 1/1;
+    position: relative; 
 }
 
 .homepage figure img{
