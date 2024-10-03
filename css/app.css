@@ -102,12 +102,13 @@ p, span{
     color: white;
 }
 
-.create-playlist :first-child{
+.create-playlist a > *:first-child{
     padding: 8px;
+    color: black;
     background-color: #A3A3A3;
 }
 
-.create-playlist{
+.create-playlist a{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -137,7 +138,7 @@ p, span{
     margin-bottom: 22px;
 }
 
-.profile > div{
+.profile a{
     display: flex;
     align-items: center;
     gap: 12px;
@@ -182,6 +183,12 @@ p, span{
     font-size: 10px;
 }
 
+/* hover */
+.song-name:hover{
+    text-decoration: underline;
+    color: white;
+}
+
 .artist{
     font-size: 13px;
     color: white;
@@ -192,12 +199,21 @@ p, span{
     flex-direction: column;
     align-items: center;
 }
+/* hover */
+.add-song button:hover{
+    color: white;
+}
 
 .player{
     width: 38%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.progress-player p{
+    color: white;
+    font-weight: bold;
 }
 
 .button-player{
@@ -211,6 +227,10 @@ p, span{
 .button-player .play{
     margin: 0 10px;
     font-size: 32px;
+}
+/* hover */
+.button-player .play :hover{
+    transform: scale(1.2);
 }
 
 .button-player button{
@@ -237,6 +257,27 @@ p, span{
     height: 100%;
     background-color: #C1C1C1;
     border-radius: 50px;
+    position: relative;
+}
+
+.progress__pin{
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+/* hover */
+.slider:hover .progress{
+    background-color: #ADFF2F;
+}
+.slider:hover .progress__pin{
+    display: block;
 }
 
 .controls{
@@ -250,7 +291,7 @@ p, span{
 }
 
 .controls button{
-    color: #C1C1C1;
+    color: white;
 }
 
 /* homepage */
@@ -271,6 +312,11 @@ p, span{
     padding: 0 20px;
     position: absolute;
     width: 100%;
+}
+
+/* hover */
+.homepage__head a:hover{
+    transform: scale(1.1);
 }
 
 .homepage__menu{
@@ -394,6 +440,17 @@ p, span{
 
     .main-menu > *{
         padding: 0 20px;
+
+    }
+
+    .main-menu > *:not(:last-child){
+        margin-bottom: 13px;
+    }
+
+    .main-menu a{
+        display: flex;
+        align-items: center;
+        gap: 9px;
     }
 
     .logo{
@@ -421,7 +478,7 @@ p, span{
         border-left: #ADFF2F 3px solid;
     }
 
-    .playlist p{
+    .playlist > p{
         margin-bottom: 10px;
     }
 
@@ -444,6 +501,20 @@ p, span{
         height: 1px;
         background-color: #717171;
         margin-bottom: 14px;
+    }
+
+    /* hover */
+    a p:hover, a span:hover{
+        color: white;
+        font-weight: bold;
+    }
+    /********* chiedere ********/
+    .create-playlist div :hover :first-child{
+        background-color: white;
+    }
+    .create-playlist div :hover p{
+        color: white;
+        font-weight: bold;
     }
 
     /* player */
